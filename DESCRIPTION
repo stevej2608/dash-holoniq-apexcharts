@@ -1,0 +1,13 @@
+Package: dashHoloniqApexcharts
+Title: Dash wrapper for apexcharts library
+Version: 0.0.5
+Description: Dash wrapper for apexcharts library
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: 
+BugReports: 
+Encoding: UTF-8
+LazyData: true
+KeepSource: true

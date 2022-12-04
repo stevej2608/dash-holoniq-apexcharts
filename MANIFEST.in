@@ -1,0 +1,14 @@
+include dash_holoniq_apexcharts/dash_holoniq_apexcharts.min.js
+include dash_holoniq_apexcharts/dash_holoniq_apexcharts.min.js.map
+include dash_holoniq_apexcharts/dash_holoniq_apexcharts.dev.js
+include dash_holoniq_apexcharts/dash_holoniq_apexcharts.dev.js.map
+include dash_holoniq_apexcharts/async-*.js
+include dash_holoniq_apexcharts/async-*.js.map
+include dash_holoniq_apexcharts/*-shared.js
+include dash_holoniq_apexcharts/*-shared.js.map
+include dash_holoniq_apexcharts/metadata.json
+include dash_holoniq_apexcharts/package-info.json
+include README.md
+include landing-page.md
+include LICENSE
+include package.json
