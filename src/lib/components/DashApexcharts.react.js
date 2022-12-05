@@ -14,8 +14,9 @@ import Chart from 'react-apexcharts'
  */
 export default class DashApexcharts extends Component {
   render() {
-    console.log("Apexchart,render()")
-    const { id, setProps, ...chartProps } = this.props;
+    const { id, setProps, loading_state, children, ...chartProps } = this.props;
+
+    // console.log(JSON.stringify(chartProps, null,2));
 
     return (
       <Chart {...chartProps} />
