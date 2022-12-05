@@ -49,9 +49,7 @@ SALES_CHART = {
                 "fontSize": "14px",
                 "fontWeight": 500,
             },
-            # 'formatter': function (value) {
-            # 	return '$' + value;
-            # }
+            'formatter': "${value}"
         },
     },
     "responsive": [{"breakpoint": 1024, "options": {"xaxis": {"labels": {"show": False}}}}],
@@ -60,7 +58,7 @@ SALES_CHART = {
 
 def sales_chart():
     series = {"name": "Revenue", "data": [6356, 6218, 6156, 6526, 6356, 6256, 6056], "color": "#0694a2"}
-    chart = DashApexcharts(options=SALES_CHART, series=[series], type='area', width=420)
+    chart = DashApexcharts(options=SALES_CHART, series=[series], type='area', width=1000)
 
     return chart
 

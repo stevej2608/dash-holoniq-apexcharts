@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 
 import Chart from 'react-apexcharts'
 
+function isString(x) {
+  return Object.prototype.toString.call(x) === "[object String]"
+}
+
+// https://stackoverflow.com/a/57565813
+
+const interpolate = (str, obj) => str.replace(
+  /{([^}]+)}/g,
+  (_, prop) => obj[prop]
+);
 
 /**
  * Wrapper for react-apexcharts library. For API and
@@ -17,6 +27,26 @@ export default class DashApexcharts extends Component {
     const { id, setProps, loading_state, children, ...chartProps } = this.props;
 
     // console.log(JSON.stringify(chartProps, null,2));
+
+    // Any X and Y axis formatters a simple strings of the form:
+    //
+    //    "{value} m/s"
+
+
+    const xfmt = chartProps.options.xaxis.labels.formatter
+    if (xfmt){
+      chartProps.options.xaxis.labels.formatter = function(value){
+        return interpolate(xfmt, { value })
+      }
+    }
+
+    const yfmt = chartProps.options.yaxis.labels.formatter
+    if (yfmt){
+      chartProps.options.yaxis.labels.formatter = function(value){
+        return interpolate(yfmt, { value })
+      }
+    }
+
 
     return (
       <Chart {...chartProps} />
