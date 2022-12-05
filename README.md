@@ -8,8 +8,6 @@
 
     pip install dash-holoniq-apexcharts
 
-    python usage.py
-
 ## Documentation
 
 Configuration options can be found [here](https://apexcharts.com/docs/react-charts/)
