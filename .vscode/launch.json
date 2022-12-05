@@ -28,10 +28,10 @@
     // then launch debugger
 
     {
-      "type": "pwa-chrome",
+      "type": "chrome",
       "name": "2. Debug component JS in Browser",
       "request": "launch",
-      "url": "http://default:6003/",
+      "url": "http://127.0.0.1:5000",
       "sourceMaps": true,
       "webRoot": "${workspaceFolder}",
       "resolveSourceMapLocations": [
